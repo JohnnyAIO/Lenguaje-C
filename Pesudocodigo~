@@ -1,0 +1,65 @@
+Inicio
+Entero n,m, o, i, j, tam, total;
+Real suma, promedio;
+logico bandera;
+bandera = falso;
+tam = 100;
+Hacer{
+	Escribir "Ingrese la cantidad de articulos";
+	Leer n;
+	Si n <= 0 o n > tam Entonces {
+	Escribir "Cantidad invalida, intentalo otra vez";
+	}Sino{
+	bandera = verdadero;
+	}//Fin-Si
+}Hasta (bandera == falso);
+Hacer{
+	Escribir "Ingrese la cantidad de precios";
+	Leer m;
+	Si m <= 0 o m > tam Entonces {
+	Escribir "Cantidad invalida, intentalo otra vez";
+	}Sino{
+	bandera = verdadero;
+	}//Fin-Si
+}Hasta (bandera == falso);
+bandera = falso;
+Hacer{
+	Escribir "Ingrese la cantidad de codigos de los articulos";
+	Leer o;
+	Si o <= 0 o o > tam Entonces {
+	Escribir "Cantidad invalida, intentalo otra vez";
+	}Sino{
+	bandera = verdadero;
+	}//Fin-Si
+}Hasta (bandera == falso);
+Real precio[tam][tam][tam];
+Para i = 1 hasta n hacer {
+	Para j = 1 hasta m hacer{
+	  Para k = 1 hasta o hacer {
+	  Escribir "Ingrese los datos de la compra, i,j,k";
+	  Leer articulo_codigo_precio[i][j][k];
+	  	Si precios_ventas[i][j][k] <= 0 o precios_ventas[i][j][k] > 50000 entonces{
+	  	Escribir "Dato invalido";
+	  	}//fin-si
+	   }//fin-para
+	}//fin-para
+}//fin-para
+Para i = 1 hasta n hacer {
+	Para j = 1 hasta m hacer{
+		Para k = 1 hasta o hacer{
+	 	Escribir precios_ventas[i][j][k];
+	 	}//fin-para
+	}//fin-para
+}//fin-para
+suma = 0;
+Para i = 1 hasta n hacer {
+	Para j = 1 hasta m hacer{
+		Para k = 1 hasta o hacer{
+	 	suma = suma + precios_ventas[i][j][k];
+	 	}//fin-para
+	}//fin-para
+}//fin-para
+total = n*m*o;
+promedio = suma/total;
+Escribir "El promedio es:, prom";
+Fin

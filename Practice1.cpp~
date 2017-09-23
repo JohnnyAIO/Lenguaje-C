@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Ingrese un numero" << endl;
+    cin >> n >>;
+    cout << "ingresaste:" << n << endl;
+    getch ();
+    return 0;
+}
