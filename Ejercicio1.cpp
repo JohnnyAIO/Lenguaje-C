@@ -1,39 +1,29 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-struct ventas{
-    float precio[5];
-    string producto[5];
-    string codigo[5];
-};
+bool esPar(int a);
+void ImprimirRango(int a, int b);
 
 
 int main(){
-    ventas v;
-    string x;
-    for(int i = 0; i < 5; i++){
-        cin >> v.producto[i];
-        cin >>  v.precio[i];
-        cin >>  v.codigo[i];
-    }//end-for
 
-    for(int i = 0; i < 5; i++){
-    cout << "Producto" << v.producto[i] << endl;
-    cout << "Precio:" <<  v.precio[i] << endl;
-    cout << "Codigo:" << v.codigo[i] << endl;
-    cout << " " << endl;
-    }//end-for
-    cin >>  x;
-    for(int i = 0; i < 5; i++){
-        if(x == v.producto[i]){
-        cout << "Producto: " << v.producto[i] << endl;
-        cout << "Precio: " <<  v.precio[i] << endl;
-        cout << "Codigo: " << v.codigo[i] << endl;
-        cout << " " << endl;
-            break;
-        }//end-for
-    }//end-for
+ImprimirRango(56,1235);
 
-    return 0;
-}//end-main
+}
+
+
+bool esPar(int a){
+bool x = a%2 == 0;
+return x;
+}//end-esPar
+
+void ImprimirRango(int a, int b){
+for(int i = a; i <= b; i++){
+if(esPar(i)){
+cout << i << endl;
+}//end-else
+
+}//end-para
+
+}//end-void
+
